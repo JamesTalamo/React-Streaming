@@ -1,4 +1,6 @@
 import '../styles/home.css'
+import '../styles/responsive/homeResponsive.css'
+
 import { Link } from 'react-router-dom'
 
 let Home = () => {

@@ -12,6 +12,12 @@ import { useState, useEffect } from "react";
 
 function App() {
 
+  let [nav, setNav] = useState('')
+  let responsive = () => {
+    console.log('You clicked me')
+    setNav(prev => !prev)
+  }
+
   useEffect(() => {
     let FetchData = async () => {
       try {
@@ -39,7 +45,7 @@ function App() {
 
       <div className="App">
         <Router>
-          <Header />
+          <Header responsive={responsive} nav={nav} />
 
           <Routes>
             <Route path="*" element={<Home />} />

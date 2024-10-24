@@ -1,0 +1,52 @@
+@media (max-width: 855px) {
+
+    .Home-page-Header {
+        width: auto;
+
+
+        /* background-color: pink; */
+    }
+
+    .Home-page-text1 {
+        font-weight: 300;
+        color: white;
+        font-size: 22px;
+        position: absolute;
+        left: 5%;
+        top: 63%;
+      
+        width: auto;
+      
+      
+        /* background-color: pink; */
+      }
+
+    .Home-page-button {
+
+        top:70%;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+}
+
+@media(max-width: 480px){
+    .Home-page-Header {
+      
+
+
+        font-size: 42px;
+    }
+
+    .Home-page-button {
+
+        top:77%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 90%;
+        z-index: 5;
+    }
+
+}
