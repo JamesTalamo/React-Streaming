@@ -1,0 +1,75 @@
+.HomeSection {
+  width: 100%;
+  height: auto;
+  background-color: blue;
+}
+
+.Home-page {
+  width: 100%;
+  height: 100vh;
+  background-color: pink;
+}
+
+#Home-page1 {
+  height: 720px;
+  background-image: url('../../public/asset/assetNavSection/BG.png');
+}
+
+.Home-page-Title {
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  font-size: 22px;
+  left: 5%;
+  top: 14%;
+
+  /* background-color: pink; */
+}
+
+.Home-page-Header {
+  width: 800px;
+  height: 200px;
+  font-weight: 800;
+  color: white;
+  font-size: 60px;
+
+  position: absolute;
+  left: 5%;
+  top: 20%;
+
+  /* background-color: pink; */
+}
+
+.Home-page-text1 {
+  font-weight: 300;
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+
+  width: 600px;
+
+
+  /* background-color: pink; */
+}
+
+.Home-page-button {
+  width: 300px;
+  height: 70px;
+  font-weight: 800;
+  color: white;
+  background-color: #F41B3B;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  position: absolute;
+  left: 5%;
+  top: 60%;
+
+  border: none;
+}

@@ -1,0 +1,21 @@
+.WatchingSection {
+  width: 100%;
+  height: auto;
+  background-color: blue;
+}
+
+.Watching-page {
+  width: 100%;
+  height: 100vh;
+  background-color: #0A070B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Watching-container-vid {
+  width: auto;
+  height: auto;
+
+  background-color: red;
+}

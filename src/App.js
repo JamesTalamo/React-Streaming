@@ -1,24 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Home from "./Routes/Home";
+import Videos from "./Routes/Videos";
+import Watching from './Routes/Watching';
+
+import Header from "./Header";
+import Footer from "./Footer";
+
+
+import { useState, useEffect } from "react";
 
 function App() {
+
+  useEffect(() => {
+    let FetchData = async () => {
+      try {
+        let res = await fetch('/database/videos.json')
+        if (!res.ok) throw new Error(`an error here in useEffect `)
+        let data = await res.json()
+        let obj = data.Video.categories[0].videos
+        setVideo(obj)
+      } catch (error) {
+        console.warn(`fetch error ${error}`)
+      }
+    }
+
+    FetchData()
+  }, [])
+
+  let [video, setVideo] = useState([])
+  let [watching, setWatching] = useState('')
+
+  console.log(video)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+      <div className="App">
+        <Router>
+          <Header />
+
+          <Routes>
+            <Route path="*" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/videos" element={<Videos video={video} setWatching={setWatching} />} />
+            <Route path="/watch/:title" element={<Watching watching={watching} />} />
+          </Routes>
+
+          <Footer />
+
+        </Router>
+      </div>
     </div>
+
   );
 }
 

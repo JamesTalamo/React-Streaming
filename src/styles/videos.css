@@ -1,0 +1,71 @@
+.VideosSection {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+
+
+}
+
+.Video-page {
+    width: 100%;
+    height: auto;
+    background-color: #0A070B;
+    /* background-color: pink; */
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+
+
+
+    padding-top: 8%;
+
+}
+
+
+.Video-item {
+    width: 300px;
+    height: 400px;
+    background-color: grey;
+    margin: 25px;
+
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.video-item-title {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+
+    color: white;
+    font-weight: 800;
+    overflow: hidden;
+}
+
+.Video-item-desc {
+    width: 300px;
+    height: 400px;
+    background-color: #737174;
+    position: absolute;
+    top: 0%;
+    display: flex;
+
+    opacity: 0;
+    transition: 0.3s;
+
+
+}
+
+.Video-item:hover .Video-item-desc {
+    display: flex;
+    color: white;
+
+    opacity: 1;
+}
