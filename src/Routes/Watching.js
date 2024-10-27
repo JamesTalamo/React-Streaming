@@ -1,4 +1,5 @@
 import '../styles/watching.css'
+import '../styles/responsive/watchingResponsive.css'
 
 let Watching = ({ watching }) => {
 

@@ -6,9 +6,17 @@ let Vidoes = ({ video, setWatching }) => {
         <div className="VideosSection">
             <div className="Video-page" id="Video-page1">
                 {video.map((video) => (
-                    <Link className='Video-item' to={`/Watch/${video.title}`} onClick={() => setWatching(video)}>
+                    <Link className='Video-item' to={`/Watch/${video.title}`}
+                        onClick={() => setWatching(video)}
+                        style={{
+                            backgroundImage: `url(${video.thumb})`,
+                            backgroundSize: 'cover'
+                        }}>
+
+                        {console.log(video.thumb)}
                         <p className='video-item-title'>{video.title}</p>
                         <div className='Video-item-desc'>{video.description}</div>
+
                     </Link>
                 ))}
 

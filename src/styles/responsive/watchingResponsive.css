@@ -1,0 +1,8 @@
+@media(max-width:1280px) {
+    .Watching-container-vid {
+        width: 95%;
+        height: auto;
+
+        /* background-color: red; */
+    }
+}

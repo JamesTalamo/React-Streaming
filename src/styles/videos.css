@@ -37,6 +37,10 @@
     position: relative;
 
     transition: 0.3s;
+    color: white;
+    
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.9);
+
 }
 
 .video-item-title {
